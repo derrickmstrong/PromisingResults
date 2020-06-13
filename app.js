@@ -2,77 +2,77 @@
 // #1
 slowMath
   .add(6, 2)
-  .then((sum) => {
-    console.log(sum);
-    return sum;
+  .then((result) => {
+    console.log(result);
+    return result;
   })
   // #2
-  .then((sum) => {
+  .then((result) => {
     slowMath
-      .multiply(sum, 2)
-      .then((sum) => {
-        console.log(sum);
-        return sum;
+      .multiply(result, 2)
+      .then((result) => {
+        console.log(result);
+        return result;
       })
       // #3
-      .then((sum) => {
+      .then((result) => {
         slowMath
-          .divide(sum, 4)
-          .then((sum) => {
-            console.log(sum);
-            return sum;
+          .divide(result, 4)
+          .then((result) => {
+            console.log(result);
+            return result;
           })
           // #4
-          .then((sum) => {
+          .then((result) => {
             slowMath
-              .subtract(sum, 3)
-              .then((sum) => {
-                console.log(sum);
-                return sum;
+              .subtract(result, 3)
+              .then((result) => {
+                console.log(result);
+                return result;
               })
               // #5
-              .then((sum) => {
+              .then((result) => {
                 slowMath
-                  .add(sum, 98)
-                  .then((sum) => {
-                    console.log(sum);
-                    return sum;
+                  .add(result, 98)
+                  .then((result) => {
+                    console.log(result);
+                    return result;
                   })
                   // #6
-                  .then((sum) => {
+                  .then((result) => {
                     slowMath
-                      .remainder(sum, 2)
-                      .then((sum) => {
-                        console.log(sum);
-                        return sum;
+                      .remainder(result, 2)
+                      .then((result) => {
+                        console.log(result);
+                        return result;
                       })
                       // #7
-                      .then((sum) => {
+                      .then((result) => {
                         slowMath
-                          .multiply(sum, 50)
-                          .then((sum) => {
-                            console.log(sum);
-                            return sum;
+                          .multiply(result, 50)
+                          .then((result) => {
+                            console.log(result);
+                            return result;
                           })
                           // #8
-                          .then((sum) => {
+                          .then((result) => {
                             slowMath
-                              .remainder(sum, 40)
-                              .then((sum) => {
-                                console.log(sum);
-                                return sum;
+                              .remainder(result, 40)
+                              .then((result) => {
+                                console.log(result);
+                                return result;
                               })
                               // #9
-                              .then((sum) => {
+                              .then((result) => {
                                 slowMath
-                                  .add(sum, 32)
-                                  .then((sum) => {
-                                    console.log(sum);
-                                    return sum;
+                                  .add(result, 32)
+                                  .then((result) => {
+                                    console.log(result);
+                                    return result;
                                   })
                                   // #10
-                                  .then((sum) => {
-                                    console.log(`The final result is ${sum}.`);
+                                  .then((result) => {
+                                    console.log(`The final result is ${result}.`);
                                   })
                                   // #11
                                   .catch((err) => {
