@@ -1,78 +1,81 @@
 // Promise.then() Chaining
+/*
 // #1
 slowMath
   .add(6, 2)
-  .then((result) => {
-    console.log(result);
-    return result;
+  .then((resolve) => {
+    console.log(resolve);
+    return resolve;
   })
   // #2
-  .then((result) => {
+  .then((resolve) => {
     slowMath
-      .multiply(result, 2)
-      .then((result) => {
-        console.log(result);
-        return result;
+      .multiply(resolve, 2)
+      .then((resolve) => {
+        console.log(resolve);
+        return resolve;
       })
       // #3
-      .then((result) => {
+      .then((resolve) => {
         slowMath
-          .divide(result, 4)
-          .then((result) => {
-            console.log(result);
-            return result;
+          .divide(resolve, 4)
+          .then((resolve) => {
+            console.log(resolve);
+            return resolve;
           })
           // #4
-          .then((result) => {
+          .then((resolve) => {
             slowMath
-              .subtract(result, 3)
-              .then((result) => {
-                console.log(result);
-                return result;
+              .subtract(resolve, 3)
+              .then((resolve) => {
+                console.log(resolve);
+                return resolve;
               })
               // #5
-              .then((result) => {
+              .then((resolve) => {
                 slowMath
-                  .add(result, 98)
-                  .then((result) => {
-                    console.log(result);
-                    return result;
+                  .add(resolve, 98)
+                  .then((resolve) => {
+                    console.log(resolve);
+                    return resolve;
                   })
                   // #6
-                  .then((result) => {
+                  .then((resolve) => {
                     slowMath
-                      .remainder(result, 2)
-                      .then((result) => {
-                        console.log(result);
-                        return result;
+                      .remainder(resolve, 2)
+                      .then((resolve) => {
+                        console.log(resolve);
+                        return resolve;
                       })
                       // #7
-                      .then((result) => {
+                      .then((resolve) => {
                         slowMath
-                          .multiply(result, 50)
-                          .then((result) => {
-                            console.log(result);
-                            return result;
+                          .multiply(resolve, 50)
+                          .then((resolve) => {
+                            console.log(resolve);
+                            return resolve;
                           })
                           // #8
-                          .then((result) => {
+                          .then((resolve) => {
                             slowMath
-                              .remainder(result, 40)
-                              .then((result) => {
-                                console.log(result);
-                                return result;
+                              .remainder(resolve, 40)
+                              .then((resolve) => {
+                                console.log(resolve);
+                                return resolve;
                               })
                               // #9
-                              .then((result) => {
+                              .then((resolve) => {
                                 slowMath
-                                  .add(result, 32)
-                                  .then((result) => {
-                                    console.log(result);
-                                    return result;
+                                  .add(resolve, 32)
+                                  .then((resolve) => {
+                                    console.log(resolve);
+                                    return resolve;
                                   })
                                   // #10
-                                  .then((result) => {
-                                    console.log(`The final result is ${result}.`);
+                                  .then((resolve) => {
+                                    console.log(
+                                      `The final resolve is ${resolve}.`
+                                    );
                                   })
                                   // #11
                                   .catch((err) => {
@@ -86,6 +89,52 @@ slowMath
           });
       });
   });
+*/
+
+// Lab Version
+/*
+slowMath
+  .add(6, 2)
+  .then((res) => {
+    console.log(res);
+    return slowMath.multiply(res, 2);
+  })
+  .then((res) => {
+    console.log(res);
+    return slowMath.divide(res, 4);
+  })
+  .then((res) => {
+    console.log(res);
+    return slowMath.subtract(res, 3);
+  })
+  .then((res) => {
+    console.log(res);
+    return slowMath.add(res, 98);
+  })
+  .then((res) => {
+    console.log(res);
+    return slowMath.remainder(res, 2);
+  })
+  .then((res) => {
+    console.log(res);
+    return slowMath.multiply(res, 50);
+  })
+  .then((res) => {
+    console.log(res);
+    return slowMath.remainder(res, 40);
+  })
+  .then((res) => {
+    console.log(res);
+    return slowMath.add(res, 32);
+  })
+  .then((res) => {
+    console.log(res);
+    console.log(`The final resolve is ${res}`);
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+*/
 
 // Async/Await
 const doMath = async () => {
